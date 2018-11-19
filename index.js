@@ -33,13 +33,17 @@ app.get('/', function (req, res) {
     res.status(200).send(defaultContent);
 })
 
-app.get('/hello/:name', function (req, res) {
-    name = req.params.name;
-    if (name === "michael" || name === "Michael")
-        res.status(200).send(nameContent);
+app.get('/hello', function (req, res) {
+    if (req.query.name) {
+        name = req.query.name;
+        if (name === "michael" || name === "Michael")
+            res.status(200).send(nameContent);
+        else
+            res.status(200).send('Hello ' + name);
+        res.end();
+    }
     else
-        res.status(200).send('Hello ' + name);
-    res.end();
+        res.status(404).send('Sorry cant find that! Error 404');
 
 })
 
