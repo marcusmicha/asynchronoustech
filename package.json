@@ -1,0 +1,25 @@
+{
+  "name": "asynchronoustech",
+  "version": "1.0.0",
+  "description": "Cette application permettra à tout uilisateur d'afficher un nom quelconque. * **/** Affiche la description de l'application * **/hello?name=`un_nom`** affiche un nom. Une description détaillée sera affichée si le nom `Michael` est entré * Toute autre route déclanchera une erreur",
+  "main": "src/server.ts",
+  "dependencies": {
+    "express": "^4.16.4",
+    "typescript": "^3.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcusmicha/asynchronoustech.git"
+  },
+  "author": "Micha Marcus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcusmicha/asynchronoustech/issues"
+  },
+  "homepage": "https://github.com/marcusmicha/asynchronoustech#readme"
+}
