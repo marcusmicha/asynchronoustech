@@ -4,13 +4,25 @@
   "description": "Cette application permettra à tout uilisateur d'afficher un nom quelconque. * **/** Affiche la description de l'application * **/hello?name=`un_nom`** affiche un nom. Une description détaillée sera affichée si le nom `Michael` est entré * Toute autre route déclanchera une erreur",
   "main": "src/server.ts",
   "dependencies": {
+    "@types/express": "^4.16.0",
+    "body-parser": "^1.18.3",
+    "encoding-down": "^5.0.4",
     "express": "^4.16.4",
+    "level-ws": "^1.0.0",
+    "leveldown": "^4.0.1",
+    "levelup": "^3.1.1",
     "typescript": "^3.1.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/levelup": "^3.1.0",
+    "nodemon": "^1.18.9",
+    "ts-node": "^7.0.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/tsc -p tsconfig.json"
+    "build": "./node_modules/.bin/tsc -p tsconfig.json",
+    "start": "./node_modules/.bin/ts-node src/server.ts",
+    "dev": "./node_modules/.bin/nodemon "
   },
   "repository": {
     "type": "git",

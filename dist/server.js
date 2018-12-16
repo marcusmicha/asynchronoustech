@@ -13,3 +13,12 @@ app.listen(port, function (err) {
     }
     console.log("server is listening on port " + port);
 });
+var metrics_1 = require("./metrics");
+app.get('/metrics', function (req, res) {
+    metrics_1.MetricsHandler.get(function (err, result) {
+        if (err) {
+            throw err;
+        }
+        res.json(result);
+    });
+});
